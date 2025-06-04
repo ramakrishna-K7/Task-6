@@ -1,34 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>My Webpage</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
             color: #333;
+            padding-bottom: 80px; /* space for footer */
         }
+
         header {
-            background-color: #007BFF;
+            background: linear-gradient(135deg, #007BFF, #0056b3);
             color: white;
-            padding: 1rem 2rem;
+            padding: 2rem 1rem;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        header h1 {
+            font-size: 2.5rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
         main {
-            padding: 2rem;
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
+
+        h2 {
+            margin-top: 2rem;
+            color: #007BFF;
+            border-left: 5px solid #007BFF;
+            padding-left: 0.5rem;
+        }
+
+        p, li {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        ul li {
+            padding: 0.5rem 0;
+            transition: transform 0.2s;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+            color: #0056b3;
+        }
+
         footer {
-            background-color: #333;
+            background: #222;
             color: white;
             text-align: center;
             padding: 1rem;
             position: fixed;
             width: 100%;
             bottom: 0;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -39,12 +94,13 @@
 
     <main>
         <h2>About Me</h2>
-        <p>This is a basic HTML template. You can add your own content, styles, and scripts to make it your own.</p>
+        <p>Hello! I'm learning how to create and host websites using GitHub Pages. This is a basic static site using HTML and CSS.</p>
 
         <h2>Projects</h2>
         <ul>
-            <li>Project One</li>
-            <li>Project Two</li>
+            <li>Personal Portfolio</li>
+            <li>To-Do List App</li>
+            <li>Weather Dashboard</li>
         </ul>
     </main>
 
